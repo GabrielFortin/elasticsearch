@@ -1,6 +1,6 @@
 language: java 
 jdk: openjdk13
 env:
-  - JAVA8_HOME=/home/travis/openjdk13
+  - JAVA8_HOME=/home/travis/openjdk13/bin/java
 script:
   - ./gradlew :modules:transport-netty4:test --tests org.elasticsearch.http.netty4.Netty4HttpServerTransportTests
