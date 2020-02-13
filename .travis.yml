@@ -1,6 +1,6 @@
 language: java 
 jdk: openjdk13
-dist: trusty
-script: echo $JAVA8_HOME
-#script:
-#  - ./gradlew :modules:transport-netty4:test --tests org.elasticsearch.http.netty4.Netty4HttpServerTransportTests
+env:
+  - JAVA8_HOME=$JAVA_HOME
+script:
+  - ./gradlew :modules:transport-netty4:test --tests org.elasticsearch.http.netty4.Netty4HttpServerTransportTests
