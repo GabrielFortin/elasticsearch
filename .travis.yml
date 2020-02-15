@@ -10,3 +10,10 @@ script:
   - ./gradlew :modules:transport-netty4:test --tests org.elasticsearch.http.netty4.Netty4HttpServerTransportTests
   # ingest common
   - ./gradlew :modules:ingest-common:test --tests org.elasticsearch.ingest.common.DateProcessorTests
+cache:
+  directories:
+    - $HOME/.gradle/wrapper
+    - $HOME/.gradle/native
+    - $HOME/.gradle/daemon
+    - $HOME/.gradle/caches/jars-1
+    - $HOME/.gradle/caches/2.3
